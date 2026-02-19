@@ -1,5 +1,5 @@
 # F1 Performance Analytics
-SQL-based performance evaluation model using 2000–2024 Formula 1 race data.
+An end-to-end SQL analytics project analyzing 2000–2024 Formula 1 race data to evaluate driver and constructor performance using KPI modeling and dashboard visualization.
 
 ## Project Overview
 This project analyzes historical Formula 1 race data to evaluate driver and constructor performance.
