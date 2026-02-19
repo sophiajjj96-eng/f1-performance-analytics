@@ -32,8 +32,10 @@ f1-performance-analytics/
 │   ├── 02_constructor_variability.sql
 │   └── 03_recent_season_analysis.sql
 │
-└── tableau/
-    └── dashboard.twbx
+├── tableau/
+│   └── dashboard.twbx
+│
+└── README.md
     
 ## Key Insights
 - Drivers starting outside top 5 positions but with high consistency showed stronger long-term performance stability.
