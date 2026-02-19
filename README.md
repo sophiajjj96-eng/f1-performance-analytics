@@ -34,3 +34,8 @@ f1-performance-analytics/
 │
 └── tableau/
     └── dashboard.twbx
+    
+## Key Insights
+- Drivers starting outside top 5 positions but with high consistency showed stronger long-term performance stability.
+- Constructor variability increased significantly during regulation change seasons.
+- Recent season momentum did not always correlate with historical dominance.
