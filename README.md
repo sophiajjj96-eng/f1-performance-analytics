@@ -21,3 +21,16 @@ The goal was to simulate a real-world analytics workflow:
 - CSV structured race datasets
 
 ## Project Structure
+f1-performance-analytics/
+│
+├── data/
+│   ├── results_history.csv
+│   └── qualifying_results.csv
+│
+├── sql/
+│   ├── 01_driver_metrics.sql
+│   ├── 02_constructor_variability.sql
+│   └── 03_recent_season_analysis.sql
+│
+└── tableau/
+    └── dashboard.twbx
