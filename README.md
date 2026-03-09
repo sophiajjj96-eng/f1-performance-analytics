@@ -1,123 +1,173 @@
 # F1 Performance Analytics
 
-An end-to-end SQL analytics project analyzing historical Formula 1 race data to evaluate driver and constructor performance using KPI modeling and dashboard-ready datasets.
+An end-to-end SQL analytics project analyzing historical Formula 1 race data to evaluate driver and constructor performance using KPI modeling and dashboard visualization.
 
-The project demonstrates how relational race data can be transformed into performance metrics and analytical insights using SQL.
+The project demonstrates how relational race data can be transformed into performance insights through SQL analysis and visualized using Tableau.
 
 ---
 
 # Project Overview
 
-This project analyzes historical Formula 1 race data to evaluate long-term performance, short-term momentum, and constructor efficiency.
+This project analyzes historical Formula 1 race data to evaluate both **long-term career performance** and **short-term race momentum** of drivers and constructors.
 
-The workflow simulates a typical analytics pipeline:
+The workflow simulates a typical data analytics pipeline:
 
 1. Extract structured race data
 2. Transform and aggregate metrics using SQL
-3. Build analytical KPIs
-4. Prepare data for visualization (Tableau)
+3. Build performance KPIs
+4. Visualize insights using Tableau dashboards
 
-The goal is to compare career performance with recent trends and identify drivers or constructors that are outperforming expectations.
+The objective is to identify performance patterns and compare historical consistency with recent performance trends.
 
 ---
 
 # Key Business Questions
 
-This project answers several analytical questions:
+This analysis explores several key questions:
 
-* Which drivers consistently outperform their starting positions?
-* Which drivers show the strongest recent momentum?
+* Which drivers accumulate the highest total points across their careers?
+* Which drivers have the strongest win records?
+* How does starting grid position relate to race outcomes?
 * Which constructors demonstrate the most consistent performance?
-* How does recent performance compare to long-term career averages?
-* Which teams improved after the 2014 regulation changes?
+* Which drivers show strong recent momentum compared to their career averages?
 
 ---
 
 # Data Source
 
-Dataset: Formula 1 World Championship Dataset
+Dataset: **Formula 1 World Championship Dataset**
 
 Source:
 https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
 
-The dataset contains:
+The dataset includes:
 
-* race results
-* driver information
-* constructors
-* circuits
-* race schedules
-* lap times
+* Race results
+* Driver information
+* Constructors
+* Circuits
+* Race schedules
+* Lap time records
 
-Only relevant tables were imported into SQLite for analysis.
+Relevant tables were imported into **SQLite** for analysis.
 
 ---
 
 # Tools Used
 
-* **SQL (SQLite)**
+### SQL (SQLite)
 
-  * Joins
-  * Aggregations
-  * CTEs
-  * KPI calculations
+Used for data transformation and metric generation.
 
-* **Tableau**
+Key SQL concepts applied:
 
-  * Dashboard visualization
-  * Performance comparison charts
+* JOIN operations across relational tables
+* Aggregations using `GROUP BY`
+* Common Table Expressions (CTEs)
+* KPI calculations
+* Filtering and ranking
 
-* **DB Browser for SQLite**
+### Tableau
 
-  * Query development
-  * Database inspection
+Used for dashboard visualization and exploratory analysis.
+
+The dashboard presents key metrics including driver performance, race wins, starting position trends, and constructor variability.
+
+### DB Browser for SQLite
+
+Used to develop and test SQL queries and manage the database.
 
 ---
 
-# Key Metrics (KPIs)
+# Key Performance Metrics (KPIs)
 
-The project models several performance metrics:
+The project models several analytical KPIs.
 
 ### Career Average Points
 
-Average points per race across a driver's entire career.
+Average points scored per race across a driver's career.
 
 ### Recent Performance
 
-Average points across the most recent races.
+Average points scored in the most recent races.
 
 ### Momentum Score
 
-Measures improvement compared to historical performance.
+Measures whether a driver is currently outperforming their historical performance.
 
-momentum_score = recent_avg_points − career_avg_points
+```
+momentum_score = recent_avg_points - career_avg_points
+```
+
+A positive score indicates improving performance.
 
 ### Overperformance Score
 
 Measures how much a driver improves relative to their starting grid position.
 
-overperformance_score = grid_position − finishing_position
+```
+overperformance_score = grid_position - finishing_position
+```
 
-Positive values indicate outperforming the starting position.
+Positive values indicate drivers finishing ahead of their starting position.
 
 ---
 
 # SQL Analysis Pipeline
 
-The SQL queries follow a structured analysis pipeline:
+The SQL scripts follow a structured analysis pipeline:
 
-1. Driver career totals
-2. Driver efficiency metrics
-3. Constructor performance analysis
-4. Post-2014 regulation analysis
-5. Momentum analysis
-6. Final KPI table generation for dashboard use
+1. **Driver career totals**
+2. **Driver efficiency metrics**
+3. **Constructor average performance**
+4. **Post-2014 constructor performance analysis**
+5. **Driver momentum analysis**
+6. **Final KPI table generation for dashboard use**
+
+---
+
+# Dashboard
+
+An interactive Tableau dashboard was created to visualize key performance metrics derived from the SQL analysis.
+
+The dashboard compares driver and constructor performance across multiple dimensions.
+
+### Key Visualizations
+
+**Driver Performance Overview**
+
+* Total career points
+* Race wins comparison
+* Average starting position
+* Constructor variability influence
+
+**Constructor Performance**
+
+* Distribution of podium finishes
+* Team performance consistency
+* Constructor ranking comparisons
+
+### Example Insights
+
+* Mercedes and Ferrari dominate podium appearances across the dataset.
+* Some drivers achieve strong race results despite weaker starting positions.
+* Constructor performance variability reveals differences in team consistency across seasons.
+
+### Tableau Workbook
+
+The interactive dashboard is available in this repository:
+
+```
+tableau/f1_dashboard.twbx
+```
+
+Open the workbook using **Tableau Desktop** or **Tableau Public** to explore the dashboard.
 
 ---
 
 # Project Structure
 
-```
+```text
 f1-performance-analytics
 │
 ├── sql
@@ -126,7 +176,7 @@ f1-performance-analytics
 │   ├── 03_constructor_avg_points.sql
 │   ├── 04_constructor_post2014.sql
 │   ├── 05_momentum_top10.sql
-│   └── 06_driver_kpi_summary.sql
+│   └── 06_final_driver_kpi_table.sql
 │
 ├── tableau
 │   └── f1_dashboard.twbx
@@ -137,29 +187,29 @@ f1-performance-analytics
 
 ---
 
-# Example Insight
+## Example Insight
 
-Preliminary analysis shows that:
+Initial analysis suggests that:
 
-* Drivers with strong recent momentum are not always the ones with the highest historical performance.
-* Constructor performance became more volatile following the 2014 regulation changes.
-* Some drivers consistently outperform their starting grid positions, indicating strong racecraft and strategy.
+* Drivers with strong recent momentum are not always those with the highest historical performance.
+* Constructor performance patterns shifted significantly after the 2014 regulation changes.
+* Some drivers consistently outperform their starting grid positions, suggesting strong race execution and strategy.
 
 ---
 
-# Future Improvements
+## Future Improvements
 
-Possible extensions to the project include:
+Potential future extensions include:
 
-* Adding lap time analysis
-* Predictive modeling for race outcomes
+* Lap time analysis
 * Driver consistency metrics
-* Season-by-season performance tracking
+* Season-by-season performance comparisons
+* Predictive race outcome modeling
 * Expanded Tableau dashboards
 
 ---
 
-# Author
+## Author
 
 SQL Analytics Project
 Focused on motorsport performance analysis and KPI modeling.
