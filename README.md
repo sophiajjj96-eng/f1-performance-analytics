@@ -1,111 +1,162 @@
 # F1 Performance Analytics
-An end-to-end SQL analytics project analyzing historical Formula 1 race data (2000–2024) to evaluate driver and constructor performance using KPI modeling and Tableau visualization.
+
+An end-to-end SQL analytics project analyzing historical Formula 1 race data to evaluate driver and constructor performance using KPI modeling and dashboard-ready datasets.
+
+The project demonstrates how relational race data can be transformed into performance metrics and analytical insights using SQL.
 
 ---
 
-## Project Overview
-This project explores Formula 1 race results to simulate a real-world analytics workflow:
-- Import structured CSV race datasets into SQLite
-- Perform aggregations and joins using SQL
-- Define performance KPIs
-- Build a Tableau dashboard for visualization
-The focus was to practice SQL fundamentals while applying business-style performance analysis.
+# Project Overview
+
+This project analyzes historical Formula 1 race data to evaluate long-term performance, short-term momentum, and constructor efficiency.
+
+The workflow simulates a typical analytics pipeline:
+
+1. Extract structured race data
+2. Transform and aggregate metrics using SQL
+3. Build analytical KPIs
+4. Prepare data for visualization (Tableau)
+
+The goal is to compare career performance with recent trends and identify drivers or constructors that are outperforming expectations.
 
 ---
 
-## Key Business Questions
-- Which drivers consistently outperform their starting grid positions?
-- Which constructors show the most performance stability or variability?
-- Who performs best in recent seasons?
-- How does short-term momentum compare to long-term career performance?
+# Key Business Questions
+
+This project answers several analytical questions:
+
+* Which drivers consistently outperform their starting positions?
+* Which drivers show the strongest recent momentum?
+* Which constructors demonstrate the most consistent performance?
+* How does recent performance compare to long-term career averages?
+* Which teams improved after the 2014 regulation changes?
 
 ---
 
-## Data Sources
-Publicly available structured Formula 1 datasets including:
-- `races.csv`
-- `results.csv`
-- `drivers.csv`
-- `constructors.csv`
-- `qualifying_results.csv`
-Database built in **SQLite** using DB Browser.
+# Data Source
+
+Dataset: Formula 1 World Championship Dataset
+
+Source:
+https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
+
+The dataset contains:
+
+* race results
+* driver information
+* constructors
+* circuits
+* race schedules
+* lap times
+
+Only relevant tables were imported into SQLite for analysis.
 
 ---
 
-## KPI Definitions
+# Tools Used
 
-### Driver KPIs
-- **Total Career Points**
-- **Average Points per Race**
-- **Grid vs Finish Performance Delta**
-- **Recent Season Average Points**
-- **Momentum Score**  
-  `recent_avg_points - career_avg_points`
-### Constructor KPIs
-- **Total Points**
-- **Average Points per Race**
-- **Performance Variability**
-- **Post-2014 Regulation Performance Comparison**
+* **SQL (SQLite)**
 
----
+  * Joins
+  * Aggregations
+  * CTEs
+  * KPI calculations
 
-## SQL Techniques Used
-- INNER JOIN
-- GROUP BY aggregation
-- HAVING filters
-- ORDER BY ranking
-- CTE (Common Table Expressions)
-- Calculated metrics using `ROUND()`, `AVG()`, `SUM()`
+* **Tableau**
+
+  * Dashboard visualization
+  * Performance comparison charts
+
+* **DB Browser for SQLite**
+
+  * Query development
+  * Database inspection
 
 ---
 
-## Project Structure
-f1-performance-analytics/
+# Key Metrics (KPIs)
+
+The project models several performance metrics:
+
+### Career Average Points
+
+Average points per race across a driver's entire career.
+
+### Recent Performance
+
+Average points across the most recent races.
+
+### Momentum Score
+
+Measures improvement compared to historical performance.
+
+momentum_score = recent_avg_points − career_avg_points
+
+### Overperformance Score
+
+Measures how much a driver improves relative to their starting grid position.
+
+overperformance_score = grid_position − finishing_position
+
+Positive values indicate outperforming the starting position.
+
+---
+
+# SQL Analysis Pipeline
+
+The SQL queries follow a structured analysis pipeline:
+
+1. Driver career totals
+2. Driver efficiency metrics
+3. Constructor performance analysis
+4. Post-2014 regulation analysis
+5. Momentum analysis
+6. Final KPI table generation for dashboard use
+
+---
+
+# Project Structure
+
+```
+f1-performance-analytics
 │
-├── data/
-│ ├── results_history.csv
-│ ├── qualifying_results.csv
-│
-├── sql/
-│ ├── 01_driver_metrics.sql
-│ ├── 02_constructor_analysis.sql
-│ ├── 03_recent_momentum.sql
-│ ├── 04_final_kpi_table.sql
-│
-├── tableau/
-│ └── dashboard.twbx
+├── sql
+│   ├── 01_driver_career_totals.sql
+│   ├── 02_driver_avg_points.sql
+│   ├── 03_constructor_avg_points.sql
+│   ├── 04_constructor_post2014.sql
+│   ├── 05_momentum_top10.sql
+│   └── 06_final_driver_kpi_table.sql
 │
 ├── f1.db
 └── README.md
-
-
----
-
-## Key Insights
-- Drivers with consistent top-5 finishes show stronger long-term scoring stability.
-- Mercedes demonstrates the highest post-2014 dominance in both total and average points.
-- Recent momentum does not always align with historical career dominance.
-- Performance variability increases during regulation change seasons.
+```
 
 ---
 
-## Tools Used
-- SQLite (DB Browser)
-- SQL
-- Tableau
-- CSV datasets
+# Example Insight
+
+Preliminary analysis shows that:
+
+* Drivers with strong recent momentum are not always the ones with the highest historical performance.
+* Constructor performance became more volatile following the 2014 regulation changes.
+* Some drivers consistently outperform their starting grid positions, indicating strong racecraft and strategy.
 
 ---
 
-## What I Learned
-- Building relational joins across multiple structured datasets
-- Defining business-oriented KPIs from raw sports data
-- Translating SQL results into dashboard-ready data models
-- Structuring analytics projects in a reproducible format
+# Future Improvements
+
+Possible extensions to the project include:
+
+* Adding lap time analysis
+* Predictive modeling for race outcomes
+* Driver consistency metrics
+* Season-by-season performance tracking
+* Expanded Tableau dashboards
 
 ---
 
-## Next Improvements
-- Add window functions for rolling performance metrics
-- Automate database build process
-- Expand to predictive modeling in Python
+# Author
+
+SQL Analytics Project
+Focused on motorsport performance analysis and KPI modeling.
