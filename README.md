@@ -187,13 +187,26 @@ f1-performance-analytics
 
 ---
 
-## Example Insight
+## Key Insights
 
-Initial analysis suggests that:
+### 1. Long-Term Driver Dominance
 
-* Drivers with strong recent momentum are not always those with the highest historical performance.
-* Constructor performance patterns shifted significantly after the 2014 regulation changes.
-* Some drivers consistently outperform their starting grid positions, suggesting strong race execution and strategy.
+Lewis Hamilton leads in total career points by a significant margin, followed by Sebastian Vettel and Max Verstappen.  
+This highlights the sustained dominance of Mercedes drivers during the hybrid era.
+
+### 2. Constructor Stability vs Variability
+
+Mercedes shows both high points accumulation and relatively stable constructor performance across seasons.  
+In contrast, several constructors demonstrate higher variability, indicating less consistent competitiveness.
+
+### 3. Drivers Who Outperform Their Grid Positions
+
+Some drivers consistently finish ahead of their starting grid positions, suggesting strong race execution and strategy.
+
+### 4. Momentum vs Career Performance
+
+Recent momentum does not always align with historical performance.  
+Several drivers with moderate career averages show strong recent performance, indicating emerging competitiveness.
 
 ---
 
