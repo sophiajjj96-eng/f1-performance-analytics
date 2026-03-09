@@ -126,7 +126,10 @@ f1-performance-analytics
 │   ├── 03_constructor_avg_points.sql
 │   ├── 04_constructor_post2014.sql
 │   ├── 05_momentum_top10.sql
-│   └── 06_final_driver_kpi_table.sql
+│   └── 06_driver_kpi_summary.sql
+│
+├── tableau
+│   └── f1_dashboard.twbx
 │
 ├── f1.db
 └── README.md
