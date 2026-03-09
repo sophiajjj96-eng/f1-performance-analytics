@@ -2,6 +2,15 @@
 
 This folder contains SQL scripts used to analyze Formula 1 performance data and build KPI tables for dashboard visualization.
 
+### Tables Used
+
+The analysis primarily uses the following tables from the Formula 1 dataset:
+
+- results
+- drivers
+- constructors
+- races
+
 ## Query Overview
 
 01_driver_career_totals.sql  
