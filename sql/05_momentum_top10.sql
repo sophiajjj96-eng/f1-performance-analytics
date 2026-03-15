@@ -1,3 +1,7 @@
+-- 05_momentum_top10.sql
+-- Identifies drivers with the strongest recent momentum
+-- Compares recent average performance vs career averages
+
 WITH recent_races AS (
   SELECT raceId
   FROM races
