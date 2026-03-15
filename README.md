@@ -135,6 +135,22 @@ The SQL scripts follow a structured analytics workflow:
 
 ---
 
+# Project Background
+
+This project was originally developed as a university team project analyzing Formula 1 race data.
+
+The initial analysis and presentation were completed in a team setting.  
+This repository represents an extended version of the project where the analysis pipeline was further developed using SQL and structured KPI modeling.
+
+Additional work in this repository includes:
+
+- Building a SQL-based analytics pipeline
+- Designing performance KPIs
+- Structuring query-based analysis
+- Developing a Tableau dashboard for visualization
+
+---
+
 # Example Insights
 
 ### Long-Term Driver Dominance
