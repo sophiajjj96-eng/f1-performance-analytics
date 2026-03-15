@@ -1,3 +1,7 @@
+-- 02_driver_avg_points.sql
+-- Calculates average points per race for each driver
+-- Used to measure driver efficiency across races
+
 SELECT
   d.forename || ' ' || d.surname AS driver_name,
   COUNT(r.raceId) AS races_entered,
