@@ -157,7 +157,7 @@ Additional work in this repository includes:
 Lewis Hamilton leads the dataset in total career points, reflecting sustained competitive dominance across multiple seasons.
 
 ### Constructor Performance Stability
-Mercedes demonstrates both high point accumulation and relatively stable performance across seasons, indicating strong organizational competitiveness.
+Mercedes demonstrates both high point accumulation and low variability, indicating strong competitive stability across seasons.
 
 ### Grid Position vs Race Outcomes
 Several drivers consistently finish ahead of their starting grid positions, suggesting strong race execution and strategic performance.
