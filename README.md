@@ -1,11 +1,4 @@
 SQL • Data Analytics • Tableau • Sports Analytics
-## Project Snapshot
-
-Dataset: 20+ years of Formula 1 race data  
-Rows analyzed: ~25,000+ race results  
-Database: SQLite  
-Queries written: 6 analytical SQL scripts  
-Visualization: Tableau dashboard
 
 # F1 Performance Analytics | SQL + Tableau
 
@@ -13,6 +6,13 @@ An end-to-end data analytics project analyzing 20+ years of Formula 1 race data 
 
 This project demonstrates how structured relational race data can be transformed into performance insights through SQL analysis and visualized using interactive dashboards.
 
+## Project Snapshot
+
+Dataset: 20+ years of Formula 1 race data  
+Rows analyzed: ~25,000+ race results  
+Database: SQLite  
+Queries written: 6 analytical SQL scripts  
+Visualization: Tableau dashboard
 ---
 
 # Project Overview
