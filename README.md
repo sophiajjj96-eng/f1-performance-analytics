@@ -13,6 +13,7 @@ Rows analyzed: ~25,000+ race results
 Database: SQLite  
 Queries written: 6 analytical SQL scripts  
 Visualization: Tableau dashboard
+
 ---
 
 # Project Overview
