@@ -1,3 +1,7 @@
+-- 03_constructor_avg_points.sql
+-- Calculates average constructor performance across races
+-- Used to compare team-level competitiveness
+
 SELECT
   c.name AS constructor_name,
   COUNT(r.raceId) AS races_entered,
