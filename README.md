@@ -106,17 +106,17 @@ Average points scored in recent races to evaluate current performance momentum.
 
 ### Momentum Score
 
-
+```
 momentum_score = recent_avg_points - career_avg_points
-
+```
 
 A positive value indicates improving performance relative to historical averages.
 
 ### Overperformance Score
 
-
+```
 overperformance_score = grid_position - finishing_position
-
+```
 
 Positive values indicate drivers finishing ahead of their starting grid position.
 
