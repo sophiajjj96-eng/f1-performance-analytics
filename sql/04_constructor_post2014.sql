@@ -1,3 +1,7 @@
+-- 04_constructor_post2014.sql
+-- Analyzes constructor performance after the 2014 regulation changes
+-- Used to evaluate team performance in the hybrid era
+
 SELECT
   c.name AS constructor_name,
   ROUND(SUM(r.points), 1) AS total_points,
