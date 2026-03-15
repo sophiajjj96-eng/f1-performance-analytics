@@ -147,7 +147,7 @@ Recent momentum does not always align with long-term career averages, highlighti
 
 # Repository Structure
 
-
+```
 f1-performance-analytics
 │
 ├── README.md
@@ -172,7 +172,7 @@ f1-performance-analytics
 │
 └── presentation
 └── F1_final_project.pdf
-
+```
 
 ---
 
