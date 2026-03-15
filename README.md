@@ -1,5 +1,3 @@
-SQL • Data Analytics • Tableau • Sports Analytics
-
 # F1 Performance Analytics | SQL + Tableau
 
 SQL • Data Analytics • Tableau • Performance Metrics
