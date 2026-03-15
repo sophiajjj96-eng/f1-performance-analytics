@@ -168,9 +168,13 @@ Open the workbook using **Tableau Desktop** or **Tableau Public** to explore the
 # Project Structure
 
 ```text
-f1-performance-analytics
+f1-performance-analytics/
 │
-├── sql
+├── README.md
+├── data/
+│   └── source-note.md
+│
+├── sql/
 │   ├── 01_driver_career_totals.sql
 │   ├── 02_driver_avg_points.sql
 │   ├── 03_constructor_avg_points.sql
@@ -178,11 +182,16 @@ f1-performance-analytics
 │   ├── 05_momentum_top10.sql
 │   └── 06_final_driver_kpi_table.sql
 │
-├── tableau
-│   └── f1_dashboard.twbx
+├── dashboard/
+│   ├── tableau-dashboard-overview.png
+│   ├── driver-kpi-chart.png
+│   └── constructor-analysis.png
 │
-├── f1.db
-└── README.md
+├── docs/
+│   └── project-summary.md
+│
+└── presentation/
+    └── F1_final_project.pdf
 ```
 
 ---
