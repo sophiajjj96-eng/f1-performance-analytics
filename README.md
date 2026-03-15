@@ -1,3 +1,4 @@
+SQL • Data Analytics • Tableau • Sports Analytics
 # F1 Performance Analytics | SQL + Tableau
 
 An end-to-end data analytics project analyzing 20+ years of Formula 1 race data (2000–2024) to evaluate driver and constructor performance using SQL-based KPI modeling and Tableau dashboards.
